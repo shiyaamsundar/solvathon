@@ -1,0 +1,21 @@
+import cloudinary
+import cloudinary.uploader
+
+# Configure Cloudinary with your credentials
+cloudinary.config(
+    cloud_name='dkvw721ez',
+    api_key='131712449173764',
+    api_secret='q7V2ecG8dL4Rl0wLolSyPnBNaqk'
+)
+
+# Specify the path to the image you want to upload
+image_path = 'C:/Users/prana/OneDrive/Desktop/apple-iphone-12-r1.jpg'
+
+# Upload the image to Cloudinary
+response = cloudinary.uploader.upload(image_path)
+
+# Extract the URL of the uploaded image from the response
+image_url = response['secure_url']
+
+# Print the image URL
+print("Uploaded Image URL:", image_url)

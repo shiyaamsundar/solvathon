@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "sentimentalanalysisdataset",
+    "private_key_id": "ab4ee3b8d53c4cee80eb41979042bcb7b6194175",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCymooyqEZv9pQ+\nxThpqz3Jt27EYnn27bYllb4sKFQ/flql2XCsgEUBAJvvgIokJZSC30xVluob8gZl\no2pXXFvNSMdMox/cFN3dHSpQEuTRwuNJ5ucDQsJQiOzkQ11hUZRa/7nOv5Y07tLS\n7y2b41pvXLxZpwsQ79ELJ3EvDAb5QJLLeOMBmobMOchzXeHHcdXnWLmNrnzUufz0\njj1Aj2G8tPytdIxcDYpbziVrH4uNah1qQMZAtv8EAjeYUKTTTePJwAJ8wcPKTqtx\nckz8u2lFyNQlVLS6l8zkE8Kp1dH6YOf5NoYdoriKtcWBhWS3kn0WFc7qklakSp/L\nN6ErumUPAgMBAAECggEAF55FGTbUfbjbWMOm1p5tANBPhwvIuiUsOaMoL1mz7mOM\npDLxafZaaawFcvIKEoafsYDK7OSUl9Z1DxrBlMTjZO2zYUiPDYD65+MT9dvRw4Vk\nniC5Ot6oqJK61OKtphFuL2xyy0rdl6lfWsKDQwKZMnHOfIKQ/Y/hEnsIRiLuhyZQ\nRNd1CoLzr4wzY0NYCudNd0ZXNYxEO1CG8tutq7LBOJKZkxdgnM2RXq11mnkq4JRI\nG/kQZ6zM6hQ5Kfbyy7aQn5+gWuNZlRXAZDuqhiknhBECuneKVOuCTDA15Sc5nghW\n3l48S6fbWn+YtQDK78sVcnh2h+HKTn0avLoo7Uv6BQKBgQD2RWdHtNgJU4d5EW9R\nGR7xdDRDdr8nC/HLzGLDGzITltYzaxdkBMOVAovWR9gQZZ9pl/Cm890CiIv7R2me\n2ek3X9Lg9QiVcoZGkjRLRIfKnLcyRpl+ZcRpDCFNMuLcT1jMR4deR7hbZ9S8/Nxq\neWMZeVr5wr+z8YEOOWitr92X0wKBgQC5qMzMhw4iPX0oETHj7e0H6LpucTi+//uY\n0BDgWsm7DHUL/zzlGtT6jhg49LuDyc8GOlglTeiqHcKOqlBSgUqrULUU0C0ySc0M\nEDsiQwtpdECXNQWJ0xhT4vrNGKCckh3laPS+pnxvHXIBOBhMEEBWYIv0Q8Wh/vie\nHSWkw3uUVQKBgQDl2oE6/B9nFP8skIlFOB0ZX0woa3yeBRf5Dxpe39MtVWs3Mozy\nXT/upCHALe4L382Z0KZcLN/qrWd5cH20Nc7mUBmSvSD1255X373PQnc7NGoIErzQ\nrEtVgGzUkNoMpkJK57gA1w/KwG5eteNDvWgxLoMq+gnS+WVq0UpSUgKQ4QKBgQCM\nxPM7pK9PwOWTqq30T2Nomso4kTpgf8EplaEmK1BHteNNjGKEp/qSW4j8Lnu7KhoB\nc91/s3nU+qmY+IPcetG94XzbYhjSx2hkXC4qBUGy3IVY4MfpP5hzimd1eNXWwWdP\nmWvw3lT8/wuA5yJtEelmVN/o/jXsZWHmqNzw95NM3QKBgQCYONrTnUHxrzcmnodv\noBQFuL7lpZQrwhlpUxLglBeHou2YSsa3ePailbf+clgJ7xHZrUQdLnoo1/wSl1TG\nNl5LoD/xWU6LjIUUo51QAAqzhlaDDK58Qh8eaWH3CQ3JxFOFHEPT2MuOEtFJGwkQ\nXDQScVWZHCdXi+Wkb19nYDKjdg==\n-----END PRIVATE KEY-----\n",
+    "client_email": "sentimentdataset@sentimentalanalysisdataset.iam.gserviceaccount.com",
+    "client_id": "101675893003630945330",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sentimentdataset%40sentimentalanalysisdataset.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
