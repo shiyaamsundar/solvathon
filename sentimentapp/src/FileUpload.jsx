@@ -52,14 +52,15 @@ function FileUpload() {
         id="input-file-upload"
         multiple={true}
         onChange={handleChange}
+        
       />
       <label
         id="label-file-upload"
         htmlFor="input-file-upload"
         className={dragActive ? "drag-active" : ""}
       >
-        <div>
-          <p>Drag and drop your file here or</p>
+        <div className="drop-pdf">
+          <p>Drag and drop your file here <br/><br/> or</p>
           <button className="upload-button" onClick={onButtonClick}>
             Upload a file
           </button>

@@ -4,6 +4,7 @@ import { ProgressBar } from "react-bootstrap";
 
 const NewsCard = ({ title, link }) => {
   return (
+  
     <div className="news-card">
       <span className="topic">TECH</span>
       <h2 className="news-title">{title}</h2>
@@ -39,6 +40,7 @@ const NewsCard = ({ title, link }) => {
         Read More
       </a>
     </div>
+    
   );
 };
 

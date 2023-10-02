@@ -10,24 +10,33 @@ import ResultComponent from "./ResultComponent";
 import FeedbackForm from "./FeedBack";
 import Testimonials from "./Testmoni";
 import Writeform from "./WriteForm";
+import Header from "./Header";
 
 function App() {
   return (
     <>
+    <Header/>
       <Marquee />
 
       <div className="main-div">
         <div>
           <RadioSelect />
-          <UserInputForm />
+       
           {/* <FileUpload /> */}
-          <Testimonials />
-          <FeedbackForm />
-          <Writeform />
+          <ResultComponent/>
+        
+        
         </div>
         <div className="news">
+    <h1>Code</h1>
           <NewsUpdate />
         </div>
+        
+      </div>
+      <div className="tertimonial">
+      <Testimonials />
+      <FeedbackForm />
+          <Writeform />
       </div>
     </>
     // <div className="container">

@@ -2,13 +2,14 @@
 
 /* Container styles */
 .feedback-container {
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    
   }
   
   /* Heading styles */
@@ -28,6 +29,8 @@
   .label-feedback {
     font-weight: bold;
     margin-bottom: 5px;
+    margin-top: 1rem;
+
   }
   
   /* Textarea styles */
@@ -37,6 +40,7 @@
     border-radius: 5px;
     font-size: 16px;
     resize: vertical;
+    width: 90%;
   }
   
   /* Submit button styles */
@@ -48,6 +52,7 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    float: right;
   }
   
   /* Button hover effect */

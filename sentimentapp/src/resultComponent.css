@@ -1,8 +1,32 @@
 .result-main-component{
-    width: "400px";
+
     textAlign: "center";
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
 }
 .circle-bar{
     width: 150px;
     height: 150px;
+}
+
+.result-wrapper{
+    background-color: red;
+    height: 250px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.result-percent{
+    background-color: aqua;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

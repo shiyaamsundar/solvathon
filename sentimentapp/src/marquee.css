@@ -1,29 +1,8 @@
-/* 
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-  body {
-    min-height: 100%;
-    margin: 0;
-    padding-inline: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-  
-  .content {
-    width: 280%;
-    border-radius: 8px;
 
-  }
+ .marquee-container{
+  background-color: yellow;
+  padding: 0.5rem;
+ }
   
   @keyframes marquee {
     from {

@@ -1,10 +1,11 @@
 .select-wrapper{
 
     height: 350px;
-    margin-left: 150px;
+    margin-left: 50px;
     display: flex;
-
-    width: 100%;
+    flex-direction: column;
+width: 100%;
+    padding: 1rem;
 
 }
 
@@ -21,6 +22,7 @@ margin: 1rem;
     max-height: 200px;
     overflow-y: auto;
     transition: 0.5s ease;
+    width: 100%;
   }
   
   .select-dropdown:focus-within {
@@ -33,12 +35,17 @@ margin: 1rem;
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: center;
   }
   
   .select-dropdown li label {
     width: 100%;
     padding: 8px 10px;
     cursor: pointer;
+
+  }
+  .select-dropdown{
+    text-align: center;
   }
   
   .select-dropdown::-webkit-scrollbar {
@@ -61,4 +68,36 @@ margin: 1rem;
 
 .select-dropdown input:focus ~ label {
   background-color: #dfdfdf;
+}
+
+.submit-btn{
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.user-sumbit-btn{
+  padding: 1rem;
+  background-color: pink;
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  color: white;
+  transition: all .7s ease-in-out;
+  height: 50px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+.user-sumbit-btn:hover{
+  color: #000;
+  background-color: white;
+}
+
+.pdf-upload{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
 }

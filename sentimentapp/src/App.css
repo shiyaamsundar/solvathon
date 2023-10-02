@@ -20,6 +20,7 @@
   height: 100vh;
   gap: 30px;
   margin: 1rem;
+  flex-basis: 60%;
 }
 
   .container{
@@ -32,6 +33,31 @@
   .news{
     background-color: rgb(234, 234, 234);  
     height: auto;
-    
+overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 400px;
+    padding: 1rem;
+    flex-basis: 43%;
+
 
   }
+
+  .news:hover::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 20px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Show vertical scrollbar */
+  }
+  
+  .news:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  
+
+  .tertimonial{
+
+    margin-top: 3rem;
+    width: 100%;
+  }
+  

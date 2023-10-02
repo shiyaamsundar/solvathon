@@ -20,6 +20,7 @@ const WriteForm = () => {
         <input
           type="email"
           id="email"
+          className="email-input"
           placeholder="Enter your email"
           value={email}
           onChange={handleEmailChange}

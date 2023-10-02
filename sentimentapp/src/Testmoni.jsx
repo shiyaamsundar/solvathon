@@ -66,7 +66,7 @@ function Testimonials() {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         className="mySwiper"
-        slidesPerView={3}
+        slidesPerView={4}
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
