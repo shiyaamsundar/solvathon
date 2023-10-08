@@ -23,7 +23,7 @@
 
   
   .news-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 8px;
     margin-top: 1rem;
   }
@@ -56,8 +56,10 @@ background-color: rgb(237, 255, 155);
     position: absolute;
     background: #FF8A65;
 
-    font-size: 12px;
-    width: 80px;
+    font-size: 10px;
+    width: 100px;
+    text-align: c;
+    
     color: #fff;
     padding: 4px 10px;
     font-weight: bold;

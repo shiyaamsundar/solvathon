@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import NewsCard from "./NewsCard";
+import { useEffect } from "react";
+import axios from "axios";
 
 const NewsUpdate = () => {
   const newsData = [
@@ -35,10 +37,21 @@ const NewsUpdate = () => {
     },
   ];
 
+  const [recentNews, setrecentNews] = useState([])
+
+  useEffect(async() => {
+    
+    const res=await axios.get('http://127.0.0.1:8000/api/recentnews')
+    console.log(res?.data,'hello')
+    setrecentNews(res?.data)
+  }, [])
+  
+
+
   return (
     <div>
-      {newsData.map((news, index) => (
-        <NewsCard key={index} title={news.title} link={news.link} />
+      {recentNews?.map((data) => (
+        <NewsCard key={data.Link} data={data} />
       ))}
     </div>
   );

@@ -11,14 +11,20 @@
   padding: 2rem;
   margin: 2rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
+  margin-top: 30rem;
 
 }
 
 
 .swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: var(--swiper-pagination-bottom, 0px);
+    bottom: var(--swiper-pagination-bottom, 5px);
 }
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -5px !important;
+  z-index: 1000;
+}
+
 /* Heading styles */
 .testimonials-heading {
   font-size: 24px;

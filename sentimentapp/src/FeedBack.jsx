@@ -23,6 +23,7 @@ function FeedbackForm() {
   return (
     <div className="feedback-container">
       <h2>Give Us Your Feedback</h2>
+      
       <form onSubmit={handleSubmit} className="feedback-form">
         <div className="form-group">
           <label htmlFor="feedback" className="label-feedback">
@@ -39,6 +40,15 @@ function FeedbackForm() {
             className="textarea-feedback"
           ></textarea>
         </div>
+
+        <input
+          type="email"
+          id="email"
+          className="feedback-email-input"
+          placeholder="Enter your email"
+   
+        />
+
         <div className="form-group">
           <button type="submit" className="submit-button">
             Submit

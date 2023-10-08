@@ -9,6 +9,11 @@
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     
   }
   
@@ -22,6 +27,7 @@
   /* Form styles */
   .feedback-form {
     display: flex;
+    gap:20px;
     flex-direction: column;
   }
   
@@ -60,3 +66,9 @@
     background-color: #0056b3;
   }
   
+
+  .feedback-email-input{
+    height: 50px;
+    width: 90%;
+    border-radius: 0;
+  }

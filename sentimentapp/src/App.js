@@ -27,8 +27,30 @@ function App() {
         
         
         </div>
-        <div className="news">
-    <h1>Code</h1>
+        <div className="news"> 
+    <div className="news-filter-container">
+    <select name="Newsfilter" id="" className="newsfilter">
+        <option value="filter by ">By stock</option>
+        <option value="filter by ">By stock</option>
+        <option value="filter by ">By stock</option>
+      </select>
+    
+      <select name="Newsfilter" id="" className="newsfilter">
+        <option value="filter by ">By stock</option>
+        <option value="filter by ">By stock</option>
+        <option value="filter by ">By stock</option>
+      </select>
+
+      <button className="newssearch">search
+      </button>
+      <i class='bx bx-refresh refresh'></i>
+      <img src=""/>
+
+
+    </div>
+
+
+   
           <NewsUpdate />
         </div>
         
@@ -36,7 +58,7 @@ function App() {
       <div className="tertimonial">
       <Testimonials />
       <FeedbackForm />
-          <Writeform />
+    
       </div>
     </>
     // <div className="container">

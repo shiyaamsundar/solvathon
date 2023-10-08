@@ -15,16 +15,21 @@ const ResultComponent = () => {
 
       <div className="result-main-component">
         <div>
-        <div>ResultComponent</div>
-        <ProgressBar now={50} label={`50% completed`} />
+        <div className="result-heading">Result And Confidence Scores </div>
         <br></br>
-
-        {/* <br></br>
-        <ProgressBar now={30} label={`30% completed`} variant="success" /> */}
-        <p className="result-percent">90%</p>
+        <div className="result-sub-container"> 
+        <h4>model result</h4>
+        <div>
+          
+        <p className="result-percent">Positive <span> 90%</span></p>
+        <p className="result-percent">Negative <span>90%</span></p>
+        </div>
+       </div>
+       
         </div>
         <div className="img-container">
-          <h4>Word Cloud Image</h4>
+        
+          {/* <img src="../../reviewWordCloud.png" alt="" /> */}
         </div>
         {/* <div className="circle-bar">
           <CircularProgressbar value={80} text={`${80}%`} />;
