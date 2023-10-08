@@ -1,6 +1,0 @@
-﻿Report Name,Gross Sales and Commissions Report
-Date Run,3/4/22
-Filters,Transaction Date >= 3/4/22,Transaction Date <= 3/4/22,Network ID IN 1,Time Zone = GMT
-
-Advertiser Name,MID,# of Impressions,# of Clicks,# of Orders,Gross Sales,Sales,Gross Total Commissions,Total Commission
-"Udemy",39197,0,6,0,0,0,0,0

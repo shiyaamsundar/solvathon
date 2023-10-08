@@ -40,9 +40,7 @@ const NewsUpdate = () => {
   const [recentNews, setrecentNews] = useState([])
 
   useEffect(async() => {
-    
     const res=await axios.get('http://127.0.0.1:8000/api/recentnews')
-    console.log(res?.data,'hello')
     setrecentNews(res?.data)
   }, [])
   
