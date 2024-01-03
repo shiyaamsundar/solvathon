@@ -1,0 +1,186 @@
+import "./App.css";
+import CsvUploader from "./Csvuploader";
+import FileUpload from "./FileUpload";
+import NewsUpdate from "./NewsUpdate";
+import UserInputForm from "./UserInputForm";
+import RadioSelect from "./RadioSelect";
+import Marquee from "./Marquee";
+import RadarChart from "./chart";
+import ResultComponent from "./ResultComponent";
+import FeedbackForm from "./FeedBack";
+import Testimonials from "./Testmoni";
+import Writeform from "./WriteForm";
+import Header from "./Header";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import NewsCard from "./NewsCard";
+
+function App() {
+  const [hasFilter, sethasFilter] = useState('False')
+  const [isArticleFetch, setisArticleFetch] = useState('False')
+  const [givenArticleName, setgivenArticleName] = useState("")
+  const [isCompanyFetch, setisCompanyFetch] = useState('False')
+  const [givenCompanyName,setgivenCompanyName]=useState("")
+  const [recentnews, setrecentnews] = useState()
+  const [dropdown, setdropdown] = useState()
+  const [filternews, setfilternews] = useState(null)
+
+
+  async function FetchRecentNews(){
+    const res=await axios.get(`http://127.0.0.1:8000/api/recentnews/${'False'}/${'False'}/${null}/${'False'}/${null}`)
+    console.log(res?.data,'hello')
+    setrecentnews(res?.data)
+}
+
+
+  useEffect(async() => {
+    const res=await axios.get('http://127.0.0.1:8000/api/dropdownData')
+    console.log(res,'dropdown')
+  setdropdown(res?.data)
+
+  FetchRecentNews()
+
+  
+    
+  }, [])
+
+
+  async function filterRecentNews(){
+    console.log(hasFilter,isArticleFetch,givenArticleName,isCompanyFetch,givenCompanyName)
+    const res=await axios.get(`http://127.0.0.1:8000/api/recentnews/${hasFilter}/${isArticleFetch}/${givenArticleName}/${isCompanyFetch}/${givenCompanyName}`)
+      console.log(res?.data,'hello1')
+      setrecentnews(res?.data)
+  }
+  
+
+
+  
+async function FetchRecentNews(){
+      const res=await axios.get(`http://127.0.0.1:8000/api/recentnews/${'False'}/${'False'}/${null}/${'False'}/${null}`)
+      console.log(res?.data,'hello2')
+      setrecentnews(res?.data)
+  }
+  useEffect(() => {
+
+
+    if(filternews=='stock'){
+      sethasFilter('True')
+    }
+
+  
+   
+  }, [recentnews,recentnews,givenCompanyName,hasFilter,isArticleFetch,givenArticleName,isCompanyFetch,filternews])
+  
+  function setStateToFilterNews(value,option){
+
+    console.log(value,option)
+
+    switch(value){
+    case 1:
+      setgivenCompanyName(option)
+      setisCompanyFetch('True')
+      setisArticleFetch('False')
+      setgivenArticleName(null)
+      sethasFilter('True')
+      break
+    case 2:
+      setisArticleFetch('True')
+      setgivenArticleName(option)
+      setgivenCompanyName(null)
+      setisCompanyFetch('False')
+      sethasFilter('True')
+      break
+    default:
+      setisArticleFetch('False')
+      setgivenArticleName(null)
+      setgivenCompanyName(null)
+      setisCompanyFetch('False')
+      sethasFilter('False')
+
+
+      
+  }
+}
+
+
+  return (
+    <>
+    {/* <Header/>
+      <Marquee /> */}
+
+      <div className="main-div">
+        <div>
+          <RadioSelect />
+       
+          {/* <FileUpload /> */}
+          <ResultComponent/>
+        
+        
+        </div>
+        <div className="news"> 
+    <div className="news-filter-container">
+
+    <select name="filternews" id="" className="newsfilter" onChange={(e)=>setfilternews(e.target.value)}>
+    <option >Select any of the below option</option>
+    <option value="stock">By Stock</option>
+    <option value="article">By ArticleName</option>                                    
+      </select>
+
+      {filternews=='stock' && (
+        <select name="Newsfilter" id="" className="newsfilter" onChange={(e)=>{setStateToFilterNews(1,e.target.value)}}>
+          <option >Select any of the below option</option>
+        {dropdown?.CompanyName.map((item)=>(
+                
+                <option key={item} value={item}>{item}</option>
+        ))}                                          
+      </select>
+      )}
+
+      {
+        filternews=='article' && (
+<select name="Newsfilter" id="" className="newsfilter" onChange={(e)=>{setStateToFilterNews(2,e.target.value)}}> 
+<option >Select any of the below option</option>
+       {dropdown?.ArticleName.map((item)=>(
+                
+                <option key={item} value={item}>{item}</option>
+       ))}
+      </select>
+        )
+      }
+      
+    
+    
+      
+        {filternews && <> <button className="newssearch"  onClick={filterRecentNews}>search
+      </button>
+
+      {recentnews && 
+      <i class='bx bx-refresh refresh' onClick={FetchRecentNews}/>
+      }      
+            </>
+      }
+     
+
+      <img src=""/>
+
+
+    </div>
+    <div>
+      {recentnews?.map((data) => (
+        <NewsCard key={data.Link} data={data} />
+      ))}
+    </div>
+        </div>
+        
+      </div>
+      <div className="tertimonial">
+      <Testimonials />
+      {/* <FeedbackForm /> */}
+    
+      </div>
+    </>
+
+  );
+}
+
+export default App;

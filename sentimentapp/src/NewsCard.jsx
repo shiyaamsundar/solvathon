@@ -3,13 +3,11 @@ import "./newsCard.css"; // Import your CSS file for styling
 import { ProgressBar } from "react-bootstrap";
 
 const NewsCard = ({ data }) => {
-
-  console.log(data)
   return (
   
     <div className="news-card">
       <span className="topic">{data.ArticleName}</span>
-      <div className="news-title">{data?.Description}</div>
+      <div className="news-title">{data?.Title}</div>
       <div className="news-title2">
       {data?.Description}
         <div className="news-sentiment">

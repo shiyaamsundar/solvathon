@@ -1,0 +1,147 @@
+.nav-main{
+    height: 80px;   
+    
+
+}
+
+.nav-container{
+
+    display: flex;
+    gap: 30px;
+    padding: 0.25rem;
+   border-radius: 5px;
+   border-bottom: 1.5px solid black;
+ 
+
+}
+
+.nav-logo{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-list{
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-list ul{
+    flex-basis: 50%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.nav-list ul li{
+    float: right;
+    margin: 1rem;
+}
+
+.nav-logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.nav-right-widget{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-right-widget button{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0px;
+background-color: rgb(255, 255, 255);
+border: 2px solid black;
+
+}
+
+.nav-right-widget .login{
+    color: black;
+    width: 100px;
+
+}
+
+
+
+
+.header-main{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px; 
+    border-bottom: 1px solid black;
+}
+
+
+.header-left{
+    flex-basis: 40%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-t1{
+    font-size: 20px;
+    font-weight: 800;
+    float: left;
+}
+.left-t2{
+    font-size: 24px;
+    font-weight: 400;
+}
+.left-t4{
+    color: gray;
+}
+
+.header-left button{
+    width: 130px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.left-icons{
+    font-size: 30px;
+    width: 150px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content:space-evenly ;
+}
+
+.left-icons i{
+    background-color: rgb(0, 0, 0);
+    height: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right{
+    padding: 1rem;
+    height: 100%;
+    flex-basis: 60%;
+    margin: 0 auto;
+    background-image: url("https://media.licdn.com/dms/image/C4D22AQHqDYulLshg5g/feedshare-shrink_2048_1536/0/1678359449212?e=1701907200&v=beta&t=mXCfwErkhbA5oIe6So0a1EZGtVMzyLPDQinHzMKrn_4");
+    background-repeat: no-repeat;
+   
+    background-position: center;
+    
+}

@@ -2,14 +2,22 @@ import React, { useRef, useState } from "react";
 import "./userInput.css";
 import FileUpload from "./FileUpload";
 import axios from "axios";
+import { useEffect } from "react";
 
 const UserInputForm = ({ input }) => {
   const form = useRef();
-  const [dragActive, setDragActive] = useState(false);
+  const [articleurl, setarticleurl] = useState(null)
+  const [newstext, setnewstext] = useState('')
+  const [ticker, setticker] = useState('')
 
   console.log(input);
   const inputRef = useRef(null);
   const [csvFile, setCsvFile] = useState(null);
+
+  useEffect(() => {
+   
+  }, [input])
+  
 
   const handleFileChange = (event) => {
     const file = event.target.files[0]; // Access the first selected file
@@ -30,10 +38,8 @@ const UserInputForm = ({ input }) => {
         formData.append("file", csvFile);
 
         const response = await axios.post(
-          "http://127.0.0.1:8000/upload",
-
+          `http://127.0.0.1:8000/upload/csv/${ticker}/${csvFile.name}`,
           formData,
-
           {
             headers: {
               "Content-Type": "multipart/form-data",
@@ -48,6 +54,41 @@ const UserInputForm = ({ input }) => {
     } else {
       console.error("No file selected.");
     }
+
+    if(input == "url")
+    {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/url', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ articleurl, ticker }),
+        });
+
+    }
+    catch(e){
+      console.log(e)
+    }
+  }
+
+    if(input=='text')
+    {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/text', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ newstext, ticker }),
+        });
+
+    }
+    catch(e){
+      console.log(e)
+    }
+    }
+   
   };
 
   return (
@@ -58,21 +99,16 @@ const UserInputForm = ({ input }) => {
             type="text"
             className="select-dropdown"
             placeholder="Paste your url here"
+            onChange={(e)=>setarticleurl(e.target.value)}
           />
         )}
         {input && (
-          <select name="format" id="format" className="select-dropdown">
-            <option selected disabled>
-              Choose a book format
-            </option>
-            <li role="option">...</li>
-            <li role="option">...</li>
-            <option value="pdf">PDF</option>
-            <option value="txt">txt</option>
-            <option value="epub">ePub</option>
-            <option value="fb2">fb2</option>
-            <option value="mobi">mobi</option>
-          </select>
+          <input
+            type="text"
+            className="select-dropdown"
+            placeholder="Please enter you picker name"
+            onChange={(e)=>setticker(e.target.value)}
+          />
         )}
 
         {input == "text" && (
@@ -82,6 +118,7 @@ const UserInputForm = ({ input }) => {
             placeholder="Paste your content here"
             rows="4"
             cols="50"
+            onChange={(e)=>setnewstext(e.target.value)}
           />
         )}
 
@@ -94,7 +131,6 @@ const UserInputForm = ({ input }) => {
               onChange={handleFileChange}
             />
 
-            {/* <button onClick={handleUpload}>Upload CSV</button> */}
           </div>
         )}
 
